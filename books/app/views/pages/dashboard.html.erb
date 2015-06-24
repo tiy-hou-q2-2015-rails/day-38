@@ -1,0 +1,19 @@
+<h1>Pages#dashboard</h1>
+
+<div id="author-placeholder"></div>
+
+
+<script id="authors" type="text/x-handlebars-template">
+
+  {{#each authors}}
+    <h2>{{ name }}</h2>
+
+    <ul class="books">
+      {{#each books}}
+        <li>{{title}}</li>
+      {{/each}}
+    </ul>
+
+  {{/each}}
+
+</script>

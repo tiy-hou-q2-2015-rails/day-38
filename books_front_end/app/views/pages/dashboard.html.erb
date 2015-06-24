@@ -1,0 +1,25 @@
+<h1>Pages#dashboard</h1>
+
+<% @books.group_by {|b| b["author"]["name"]}.each do |author_name, books| %>
+  <h2><%= author_name %></h2>
+  <% books.each do |book| %>
+    <ul>
+      <li><%= book["title"] %></li>
+    </ul>
+  <% end %>
+<% end %>
+
+<hr/>
+
+
+
+<% @authors.each do |author| %>
+  <h2><%= author["name"] %></h2>
+
+  <% author["books"].each do |book| %>
+    <ul>
+      <li><%= book["title"] %></li>
+    </ul>
+  <% end %>
+
+<% end %>
