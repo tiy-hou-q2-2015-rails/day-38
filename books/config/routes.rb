@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   get "/api/authors" => 'api/authors#index'
 
+  # get '/sign_in' => 'session#new', as: :sign_in
+  post '/api/auth' => 'api/session#create', as: :auth
+  # delete '/auth' => 'session#delete', as: :sign_out
+
+  post '/api/users' => 'api/users#create', as: :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'sign_in' => 'sessions#new', as: :sign_in
+  post 'auth' => 'sessions#create', as: :auth
+
   root 'pages#dashboard'
 
   # The priority is based upon order of creation: first created -> highest priority.
